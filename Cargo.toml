@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 assert_cmd = "2.0"
+colored = "2.1"
 
 
 
