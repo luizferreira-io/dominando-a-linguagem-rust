@@ -1,4 +1,6 @@
 use colored::Colorize;
+
+mod examples;
 fn main() {
     println! (
         "\n {}\n {}\n {}\n {}\n {}\n {}\n {}\n {}\n\n",
@@ -7,21 +9,9 @@ fn main() {
         " - xxx".green(),
         " - xxx".green(),
         " - xxx".green(),
-        "Comandos de teste:",
-        "rustup nightly".yellow(),
+        "Comandos para teste automatizado:",
+        "rustup default nightly".yellow(),
         "cargo test".yellow(),
     );
-}
-
-#[test]
-fn testa_tudo() {
-    assert_cmd::Command::new("cargo")
-        .arg("-q")
-        .arg("-Zscript")
-        .arg("src/examples/capitulo_01/01-01/main.rs")
-        .arg("run")
-        .assert()
-        .success()
-        .stdout("Teste");
 }
 
